@@ -1,5 +1,9 @@
-# sih-lambda-initial
-Anup Kulkarni
-Tejas Devda
-Shreya Kotalwar
-Omkar Bahiwal
+# SIH Team Lambda - &lambda;
+
+#### Team Members:
+* Anup Kulkarni
+* Tejas Devda
+* Roman Kazi
+* Shreya Kotalwar
+* Omkar Bahiwal
+* Swati Sharma
