@@ -8,8 +8,7 @@
 * Omkar Bahiwal
 * Swati Sharma
 
-
-* Work Schedule until 24 Feb 2019
+#### Work Schedule until 24 Feb 2019 
   * 10am - Reporting / Completion of pending tasks / Research / Survey
   * 12pm to 12:30pm - Allotment of Tasks
   * 12:30pm to 1:30pm - Break
