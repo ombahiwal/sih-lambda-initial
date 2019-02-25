@@ -16,7 +16,7 @@ p = subprocess.Popen(command, stdout=subprocess.PIPE)
 text = p.stdout.read()
 # output fetched in the "Text" Variable as a string, later data can be extracted with regular expressions.
 # one = line by line
-one = list(text.split("\n"))
+one = list(text.decode().split("\n"))
 #
 two = one[3].split(" ")
 output_in_list = []
