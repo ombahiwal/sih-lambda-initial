@@ -4,15 +4,15 @@
 * Anup Kulkarni
 * Tejas Devda
 * Roman Kazi
-* Shreya Kotalwar
+* Akshay Shinde 
 * Omkar Bahiwal
-* Swati Sharma
+* Sudhir Singh
 
-#### Work Schedule until 24 Feb 2019 
+#### Work Schedule until 26 Feb 2019 
   * 10am - Reporting / Completion of pending tasks / Research / Survey
   * 12pm to 12:30pm - Allotment of Tasks
-  * 12:30pm to 1:30pm - Break
-  * 3:00pm to 3:15pm - Break
-  * 5:00pm to 5:15pm - Break
-  * 5:15pm to 6:30pm - Summary of Tasks
+  * 12:45pm to 1:30pm - Break
+  * 5:00pm to 5:30pm - Break
+  * 5:30pm to 7:00pm - Summary of Tasks
+  * 5:30pm to 7:00pm - Summary of Tasks
   
