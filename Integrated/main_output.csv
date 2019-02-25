@@ -1,0 +1,16 @@
+Proto,Recv-Q,Send-Q,Local,Address,Foreign,Address,(state)
+tcp4,0,0,air.51417,bom12s01-in-f14..https,ESTABLISHED
+tcp4,0,0,air.51416,bom07s16-in-f2.1.https,ESTABLISHED
+tcp4,31,0,air.51415,lb-192-30-253-11.https,CLOSE_WAIT
+tcp4,0,0,air.51408,bom07s15-in-f10..https,ESTABLISHED
+tcp4,0,0,air.51400,104.16.2.35.https,ESTABLISHED
+tcp4,0,0,air.51398,a104-103-89-123..https,ESTABLISHED
+tcp4,0,0,air.51396,151.101.1.69.https,ESTABLISHED
+tcp4,0,0,air.51379,lb-192-30-253-12.https,ESTABLISHED
+tcp4,0,55,air.51346,52.109.60.3.https,ESTABLISHED
+tcp4,0,0,air.50949,13.107.18.11.https,ESTABLISHED
+tcp4,0,0,air.50613,ec2-18-188-74-23.ms-wb,ESTABLISHED
+tcp4,0,0,air.50384,17.188.138.70.5223,ESTABLISHED
+tcp4,0,0,air.50382,17.242.12.9.5223,ESTABLISHED
+tcp4,0,0,air.50380,sc-in-f188.1e100.5228,ESTABLISHED
+
