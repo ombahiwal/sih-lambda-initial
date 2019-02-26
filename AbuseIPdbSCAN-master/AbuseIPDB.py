@@ -103,6 +103,7 @@ def abuse_check(IP, days):
 
 
 def get_report():
+    log_check = None
     # Convert category numbers to words
     if args.translate:
         for log in logs:
@@ -141,11 +142,21 @@ def get_report():
     else:
         for log in logs:
             print(log)
-            with open('akshay.txt', 'w') as file:
-                 file.write(json.dumps(logs))
+            if (log_check == None):
+                with open('example_output.csv', 'a') as file:
+                     file.write(json.dumps(log))
+            elif (log['ip'] == log_check ):
+                exdict={}    
+                exdict=log
+            else:
+                with open('example_output.csv', 'a') as file:
+                     file.write(json.dumps(log))
+            #with open('example_output.txt', 'w') as file:
+                 #file.write(json.dumps(log))
+            log_check = log['ip']
         pass
 	#f = open("demofile.txt", "w")
-	#f.write(log)
+	#f.write(log)						or log_check == None 
 
 def main():
     if args.days:
