@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import csv
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -86,6 +86,11 @@ class Ui_MainWindow(object):
         self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.label.setText(_translate("MainWindow", "Genysis Network Analysis Tool"))
 
+def get_csv_to_list(file_name):
+    with open(file_name, 'r') as f:
+        reader = csv.reader(f)
+        your_list = list(reader)
+    return your_list
 
 if __name__ == "__main__":
     import sys
@@ -96,7 +101,10 @@ if __name__ == "__main__":
     rect = screen.availableGeometry()
     length = size.width()
     breadth = size.height()
-    list1=[["Sr no","IP Address","Foriegn IP","Country"],[1,4654654,"gsgesrgdfgfd","ewraf5a4ewf6"],[2,894654654,"fsadfsdfadsf","dfasd6f465ds"]]
+    # getting CSV to list
+    list1 = get_csv_to_list("../Integrated/main_output.csv")
+    print(list1)
+    # list1=[["Sr no","IP Address","Foriegn IP","Country"],[1,4654654,"gsgesrgdfgfd","ewraf5a4ewf6"],[2,894654654,"fsadfsdfadsf","dfasd6f465ds"]]
     rowlen=len(list1)
     columnlen=len(list1[0])
     ui = Ui_MainWindow()
