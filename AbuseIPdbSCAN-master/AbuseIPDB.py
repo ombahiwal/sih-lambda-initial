@@ -148,25 +148,38 @@ def get_report():
             csvreader = []
             if (log_check == None):
                 list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
-                with open('example_output.csv', 'r') as csvfile:
-                     csvreader = csv.reader(csvfile)
-                     list2 = list(csvreader)
-                print(list2)
-                if (csvreader != log['ip']):
+                if (log['isWhitelisted'] == True):
                     with open('example_output.csv', 'a') as csvfile:
                          writer = csv.writer(csvfile)
                          writer.writerows([list1])
-                         #file.write("\n")
+                    with open('white_listed.csv', 'a') as csvfile2:
+                         writer = csv.writer(csvfile2)
+                         writer.writerows([list1])
+                else:
+                    with open('example_output.csv', 'a') as csvfile3:
+                         writer = csv.writer(csvfile3)
+                         writer.writerows([list1])
+                    with open('black_listed.csv', 'a') as csvfile4:
+                         writer = csv.writer(csvfile4)
+                         writer.writerows([list1])
             elif (log['ip'] == log_check ):
                 exdict={}    
                 exdict=log
             else:
                 list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
-                with open('example_output.csv', 'r') as csvfile:
-                     csvreader = csv.reader(csvfile)
-                if (csvreader != log['ip']):
+                if (log['isWhitelisted'] == True):
                     with open('example_output.csv', 'a') as csvfile:
                          writer = csv.writer(csvfile)
+                         writer.writerows([list1])
+                    with open('white_listed.csv', 'a') as csvfile2:
+                         writer = csv.writer(csvfile2)
+                         writer.writerows([list1])
+                else:
+                    with open('example_output.csv', 'a') as csvfile3:
+                         writer = csv.writer(csvfile3)
+                         writer.writerows([list1])
+                    with open('black_listed.csv', 'a') as csvfile4:
+                         writer = csv.writer(csvfile4)
                          writer.writerows([list1])
             #with open('example_output.txt', 'w') as file:
                  #file.write(json.dumps(log))
