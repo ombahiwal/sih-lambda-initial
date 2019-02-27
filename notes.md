@@ -11,3 +11,7 @@
   * 18.188.74.234
   * Username - Administrator
   * Password - qlT%C;r=Ix6aG55AAW.iEqprw*uthY7q
+  
+* Base Map Installation on Ubuntu
+  * sudo apt-get install libgeos-dev
+  * pip3 install --user https://github.com/matplotlib/basemap/archive/master.zip
