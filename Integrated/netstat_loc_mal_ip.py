@@ -3,8 +3,8 @@ import subprocess
 import csv
 print("All Listening Ports: ")
 operating_system = platform.system()
-command_win = ['netstat', '-ab']
-command_linux = ['netstat', '-tup']
+command_win = ['netstat', '-ab', '-n']
+command_linux = ['netstat', '-tup', '-n']
 command_mac = ['netstat', '-p', 'tcp', '-n']
 if operating_system == 'Darwin':
     command = command_mac
@@ -49,16 +49,29 @@ del three
 del text
 print(output_in_list)
 print("Netstat Done..")
-# with open("main_output.csv", "w") as f:
-#     writer = csv.writer(f)
-#     writer.writerows(output_in_list)
-#
-# # print(output_in_list)
-# print("File write Done.. saved as main_output.csv")
+with open("main_output.csv", "w") as f:
+    writer = csv.writer(f)
+    writer.writerows(output_in_list)
+
+# print(output_in_list)
+print("File write Done.. saved as main_output.csv")
+
 retcode = p.wait()
+
+# Code for IP Location
+
 sample_ip = output_in_list[1][4]
 sample_ip = '52.109.60.3'
 command = ['../Scripts/for_maps/IPGeoLocation-master/./ipgeolocation.py','-t',sample_ip]
+p = subprocess.Popen(command, stdout=subprocess.PIPE)
+text = p.stdout.read()
+print(text)
+retcode = p.wait()
+# python3 filename.py -f inputfile.txt -c outputfile.csv
+# Code for abuse IP Integration
+sample_ip = output_in_list[1][4]
+sample_ip = '52.109.60.3'
+command = ['python3' , '../AbuseIPdbSCAN-master/AbuseIPDB.py','-i',sample_ip]
 p = subprocess.Popen(command, stdout=subprocess.PIPE)
 text = p.stdout.read()
 print(text)

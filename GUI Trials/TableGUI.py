@@ -103,6 +103,7 @@ if __name__ == "__main__":
     breadth = size.height()
     # getting CSV to list
     list1 = get_csv_to_list("../Integrated/main_output.csv")
+    list1 = list1[0:-1]
     print(list1)
     # list1=[["Sr no","IP Address","Foriegn IP","Country"],[1,4654654,"gsgesrgdfgfd","ewraf5a4ewf6"],[2,894654654,"fsadfsdfadsf","dfasd6f465ds"]]
     rowlen=len(list1)
