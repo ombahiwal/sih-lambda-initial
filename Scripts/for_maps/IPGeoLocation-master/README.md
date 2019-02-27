@@ -1,4 +1,12 @@
-# IPGeoLocation
+# IPGeoLocation with script.sh
+
+### script.sh
+Usage:
+```
+$ chmod +x script.sh
+$ ./script.sh
+```
+
 ====
 * A tool to retrieve IP Geolocation information
 * Powered by [ip-api](http://ip-api.com/docs/)
@@ -90,7 +98,7 @@ files with this option.
   -ec file, --csv file  Export results in CSV format.
   -ex file, --xml file  Export results in XML format.
 ```
-  
+
 
 Examples
 ====
@@ -106,7 +114,7 @@ Examples
 **Do not save .log files**
 * ./ip2geolocation.py -t example.com --nolog
 
-**Custom User Agent string** 
+**Custom User Agent string**
 * ./ip2geolocation.py -t x.x.x.x -u "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
 
 **Using Proxy**
@@ -137,4 +145,4 @@ Examples
 * ./ip2geolocation.py -T /path/to/targets/targets.txt --xml /path/to/results.xml
 
 **Do not print results to terminal**
-* ./ip2geolocation.py -m -e /path/to/results.txt --noprint 
+* ./ip2geolocation.py -m -e /path/to/results.txt --noprint
