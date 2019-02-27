@@ -5,10 +5,10 @@
     This file is part of IPGeoLocation tool.
     Copyright (C) 2015-2016 @maldevel
     https://github.com/maldevel/IPGeoLocation
-    
-    IPGeoLocation - Retrieve IP Geolocation information 
+
+    IPGeoLocation - Retrieve IP Geolocation information
     Powered by http://ip-api.com
-    
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -21,7 +21,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-    
+
     For more see the file 'LICENSE' for copying permission.
 """
 
@@ -32,28 +32,28 @@ from xml.etree import ElementTree as etree
 from collections import OrderedDict
 
 class FileExporter:
-    
+
     def __init__(self):
         pass
-    
+
     def ExportListToCSV(self, ipGeoLocObjs, filename):
         return self.__ExportToCSV(ipGeoLocObjs, filename)
-        
+
     def ExportToCSV(self, ipGeoLocObj, filename):
         return self.__ExportToCSV([ipGeoLocObj], filename)
-    
+
     def ExportListToXML(self, ipGeoLocObjs, filename):
         return self.__ExportToXML(ipGeoLocObjs, filename)
-    
+
     def ExportToXML(self, ipGeoLocObj, filename):
         return self.__ExportToXML([ipGeoLocObj], filename)
 
     def ExportListToTXT(self, ipGeoLocObjs, filename):
         return self.__ExportToTXT(ipGeoLocObjs, filename)
-        
+
     def ExportToTXT(self, ipGeoLocObj, filename):
         return self.__ExportToTXT([ipGeoLocObj], filename)
-    
+
     def __ExportToTXT(self, ipGeoLocObjs, filename):
         try:
             with open(filename, 'w') as txtfile:
@@ -79,27 +79,27 @@ class FileExporter:
             return True
         except:
             return False
-        
-        
+
+
     def __ExportToXML(self, ipGeoLocObjs, filename):
         try:
             root = etree.Element('Results')
-            
+
             for ipGeoLocObj in ipGeoLocObjs:
                 if ipGeoLocObj:
                     orderedData = OrderedDict(sorted(ipGeoLocObj.ToDict().items()))
                     self.__add_items(etree.SubElement(root, 'IPGeolocation'),
                       ((key.replace(' ', ''), value) for key, value in orderedData.items()))
-        
+
                     tree = etree.ElementTree(root)
 
             tree.write(filename, xml_declaration=True, encoding='utf-8')
-                        
+
             return True
         except:
             return False
-        
-        
+
+
     def __ExportToCSV(self, ipGeoLocObjs, filename):
         try:
             with open(filename, 'w', newline='') as csvfile:
@@ -126,10 +126,9 @@ class FileExporter:
             return True
         except:
             return False
-        
-    
+
+
     def __add_items(self, root, items):
         for name, text in items:
             elem = etree.SubElement(root, name)
             elem.text = text
-

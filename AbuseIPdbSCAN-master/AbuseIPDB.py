@@ -104,6 +104,8 @@ def abuse_check(IP, days):
 
 def get_report():
     log_check = None
+    fields = []
+    rows = []
     # Convert category numbers to words
     if args.translate:
         for log in logs:
@@ -141,16 +143,31 @@ def get_report():
         pass
     else:
         for log in logs:
-            print(log)
+            #print(log)
+            list1 = []
+            csvreader = []
             if (log_check == None):
-                with open('example_output.csv', 'a') as file:
-                     file.write(json.dumps(log))
+                list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
+                with open('example_output.csv', 'r') as csvfile:
+                     csvreader = csv.reader(csvfile)
+                     list2 = list(csvreader)
+                print(list2)
+                if (csvreader != log['ip']):
+                    with open('example_output.csv', 'a') as csvfile:
+                         writer = csv.writer(csvfile)
+                         writer.writerows([list1])
+                         #file.write("\n")
             elif (log['ip'] == log_check ):
                 exdict={}    
                 exdict=log
             else:
-                with open('example_output.csv', 'a') as file:
-                     file.write(json.dumps(log))
+                list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
+                with open('example_output.csv', 'r') as csvfile:
+                     csvreader = csv.reader(csvfile)
+                if (csvreader != log['ip']):
+                    with open('example_output.csv', 'a') as csvfile:
+                         writer = csv.writer(csvfile)
+                         writer.writerows([list1])
             #with open('example_output.txt', 'w') as file:
                  #file.write(json.dumps(log))
             log_check = log['ip']
