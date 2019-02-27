@@ -4,7 +4,7 @@ import csv
 print("All Listening Ports: ")
 operating_system = platform.system()
 command_win = ['netstat', '-ab', '-n']
-command_linux = ['netstat', '-tup', '-n']
+command_linux = ['netstat', '-tupnc']
 command_mac = ['netstat', '-p', 'tcp', '-n']
 if operating_system == 'Darwin':
     command = command_mac
@@ -70,7 +70,6 @@ retcode = p.wait()
 # python3 filename.py -f inputfile.txt -c outputfile.csv
 # Code for abuse IP Integration
 sample_ip = output_in_list[1][4]
-sample_ip = '52.109.60.3'
 command = ['python3' , '../AbuseIPdbSCAN-master/AbuseIPDB.py','-i',sample_ip]
 p = subprocess.Popen(command, stdout=subprocess.PIPE)
 text = p.stdout.read()
