@@ -9,6 +9,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import csv
 
+import basemap
+
+
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -16,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
-        self.tableWidget.setGeometry(QtCore.QRect(0, 40, length-66, breadth-120))
+        self.tableWidget.setGeometry(QtCore.QRect(0, 40, length-66, breadth-150))
         self.tableWidget.setAutoFillBackground(True)
         self.tableWidget.setFrameShape(QtWidgets.QFrame.Box)
         self.tableWidget.setLineWidth(1)
@@ -63,6 +67,9 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(30, 192, 244, 255), stop:1 rgba(255, 255, 255, 255));")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(((length-66)/2)-80,breadth-105, 160, 20))
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -85,6 +92,8 @@ class Ui_MainWindow(object):
                 item.setText(_translate("MainWindow",str(list1[i][j])))
         self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.label.setText(_translate("MainWindow", "Genysis Network Analysis Tool"))
+        self.pushButton.setText(_translate("MainWindow", "Display Map"))
+        self.pushButton.clicked.connect(basemap.plt.show)
 
 def get_csv_to_list(file_name):
     with open(file_name, 'r') as f:
@@ -104,7 +113,7 @@ if __name__ == "__main__":
     # getting CSV to list
     list1 = get_csv_to_list("../Integrated/main_output.csv")
     list1 = list1[0:-1]
-    print(list1)
+#    print(list1)
     # list1=[["Sr no","IP Address","Foriegn IP","Country"],[1,4654654,"gsgesrgdfgfd","ewraf5a4ewf6"],[2,894654654,"fsadfsdfadsf","dfasd6f465ds"]]
     rowlen=len(list1)
     columnlen=len(list1[0])
