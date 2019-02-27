@@ -189,6 +189,7 @@ def get_report():
 	#f.write(log)						or log_check == None 
 
 def main():
+    akshay = 0
     if args.days:
         days = args.days
     else:
@@ -213,12 +214,30 @@ def main():
                 if count == 59:
                     time.sleep(60)
                     count = 0
-                abuse_check(ip, days)
+                with open('example_output.csv', 'r') as csvfile1:
+                     csvreader = csv.reader(csvfile1)
+                     list2 = list(csvreader)
+                for i in range(len(list2)):
+                    if (list2[i][0] == ip):
+                        print("ip present")
+                    else:
+                        abuse_check(ip, days)
                 count += 1
         get_report()
     elif args.ip:
         if ipaddress.ip_address(args.ip).is_private is False:
-            abuse_check(args.ip, days)
+            with open('example_output.csv', 'r') as csvfile1:
+                 csvreader = csv.reader(csvfile1)
+                 list2 = list(csvreader)
+            for i in range(len(list2)):
+                print(list2[i][0])
+                if (list2[i][0] == args.ip):
+                    akshay = 1
+                    #abuse_check(args.ip, days)
+                else:
+                    print("ip present")
+            if (akshay != 1) :
+                abuse_check(args.ip, days)
             get_report()
         else:
             sys.exit("A Private IP will return no result...")

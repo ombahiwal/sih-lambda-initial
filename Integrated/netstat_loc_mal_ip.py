@@ -1,9 +1,17 @@
 import platform
 import subprocess
 import csv
+
+import whois
+
+data = input("Enter a domain: ")
+w = whois.query(data)
+print(w.contacts)
+
+
 print("All Listening Ports: ")
 operating_system = platform.system()
-command_win = ['netstat', '-ab', '-n']
+command_win = ['netstat', '-n']
 command_linux = ['netstat', '-tupnc']
 command_mac = ['netstat', '-p', 'tcp', '-n']
 if operating_system == 'Darwin':
@@ -48,6 +56,7 @@ del two
 del three
 del text
 print(output_in_list)
+length_output = len(output_in_list)
 print("Netstat Done..")
 with open("main_output.csv", "w") as f:
     writer = csv.writer(f)
@@ -69,9 +78,36 @@ print(text)
 retcode = p.wait()
 # python3 filename.py -f inputfile.txt -c outputfile.csv
 # Code for abuse IP Integration
+print("Abuse IP test Running...")
 sample_ip = output_in_list[1][4]
-command = ['python3' , '../AbuseIPdbSCAN-master/AbuseIPDB.py','-i',sample_ip]
-p = subprocess.Popen(command, stdout=subprocess.PIPE)
-text = p.stdout.read()
-print(text)
+sample_ip = '192.30.253.113'
+foriegn_ips = []
+
+
+
+# ip parsing logic
+if operating_system == 'Darwin':
+    for i in range(1, len(output_in_list)-1):
+        temp = output_in_list[i][4].split(".")
+        temp = temp[0:-1]
+        temp = str.join('.', temp)
+        foriegn_ips.append(temp)
+
+elif operating_system == 'Linux':
+    for i in range(1, len(output_in_list)-1):
+        temp = output_in_list[1][4].split(".")
+        temp2 = temp[-1]
+        temp2 = temp2.split(':')
+        temp.append(temp2[0])
+        temp = str.join('.', temp)
+        foriegn_ips.append(temp)
+
+
+# Abuse IP Logic
+for i in range(1, len(foriegn_ips) ):
+    print("Testing : ",foriegn_ips[i])
+    command = ['python3' , '../AbuseIPdbSCAN-master/AbuseIPDB.py','-i',foriegn_ips[i]]
+    p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    text = p.stdout.read()
 retcode = p.wait()
+print("Test Finished.")

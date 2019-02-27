@@ -29,3 +29,80 @@
 [INFO] 2019-02-27 16:12:49 - Retrieving 52.109.60.3 Geolocation..
 [INFO] 2019-02-27 16:12:49 - User-Agent used: IP2GeoLocation 2.0.4
 [INFO] 2019-02-27 16:12:49 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 16:42:30 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 16:42:31 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 16:42:31 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 16:45:01 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 16:45:02 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 16:45:02 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 16:47:46 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 16:47:46 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 16:47:46 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 16:48:37 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 16:48:37 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 16:48:37 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 18:33:36 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 18:33:37 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 18:33:37 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 18:53:04 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 18:53:05 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 18:53:05 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 18:53:11 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 18:53:11 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 18:53:11 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 18:54:34 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 18:54:34 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 18:54:34 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 18:54:54 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 18:54:54 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 18:54:54 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:09:37 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:09:38 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:09:38 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:29:17 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:29:18 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:29:18 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:30:02 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:30:02 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:30:02 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:30:16 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:30:16 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:30:16 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:31:21 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:31:21 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:31:21 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:37:57 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:37:58 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:37:58 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 19:42:48 - Retrieving 52.109.60.3 Geolocation..
+[ERROR] 2019-02-27 19:43:18 - An unexpected error occurred <urlopen error [Errno 8] nodename nor servname provided, or not known>!
+[ERROR] 2019-02-27 19:43:18 - Retrieving IP Geolocation information failed.
+[INFO] 2019-02-27 19:44:00 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:44:18 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-02-27 19:44:18 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-02-27 19:44:18 - Retrieving IP Geolocation information failed.
+[INFO] 2019-02-27 19:45:28 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:45:28 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-02-27 19:45:28 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-02-27 19:45:28 - Retrieving IP Geolocation information failed.
+[INFO] 2019-02-27 19:48:19 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 19:48:19 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 19:48:19 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 20:38:34 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 20:38:35 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 20:38:35 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 20:39:33 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 20:39:33 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 20:39:33 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 20:39:50 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 20:39:50 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 20:39:50 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 20:40:34 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 20:40:34 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 20:40:34 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 21:03:37 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 21:03:37 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 21:03:37 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-02-27 21:04:02 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-02-27 21:04:02 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-02-27 21:04:02 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).

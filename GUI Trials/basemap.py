@@ -1,6 +1,5 @@
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
-
 m = Basemap(projection='mill',
             llcrnrlat = 25,
             llcrnrlon = -130,
