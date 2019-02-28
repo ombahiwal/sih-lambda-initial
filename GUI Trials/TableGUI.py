@@ -93,7 +93,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.label.setText(_translate("MainWindow", "Genysis Network Analysis Tool"))
         self.pushButton.setText(_translate("MainWindow", "Display Map"))
-        self.pushButton.clicked.connect(basemap.plt.show)
+        self.pushButton.clicked.connect(basemap.calling)
 
 def get_csv_to_list(file_name):
     with open(file_name, 'r') as f:
