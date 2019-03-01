@@ -2,11 +2,6 @@ import platform
 import subprocess
 import csv
 
-import whois
-
-data = input("Enter a domain: ")
-w = whois.query(data)
-print(w.contacts)
 
 
 print("All Listening Ports: ")

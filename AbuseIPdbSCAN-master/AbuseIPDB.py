@@ -163,7 +163,7 @@ def get_report():
                          writer = csv.writer(csvfile4)
                          writer.writerows([list1])
             elif (log['ip'] == log_check ):
-                exdict={}    
+                exdict={}
                 exdict=log
             else:
                 list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
@@ -186,7 +186,7 @@ def get_report():
             log_check = log['ip']
         pass
 	#f = open("demofile.txt", "w")
-	#f.write(log)						or log_check == None 
+	#f.write(log)						or log_check == None
 
 def main():
     akshay = 0
@@ -226,19 +226,22 @@ def main():
         get_report()
     elif args.ip:
         if ipaddress.ip_address(args.ip).is_private is False:
-            with open('example_output.csv', 'r') as csvfile1:
-                 csvreader = csv.reader(csvfile1)
-                 list2 = list(csvreader)
-            for i in range(len(list2)):
-                print(list2[i][0])
-                if (list2[i][0] == args.ip):
-                    akshay = 1
-                    #abuse_check(args.ip, days)
-                else:
-                    print("ip present")
-            if (akshay != 1) :
-                abuse_check(args.ip, days)
-            get_report()
+            try:
+                with open('example_output.csv', 'r') as csvfile1:
+                     csvreader = csv.reader(csvfile1)
+                     list2 = list(csvreader)
+                for i in range(len(list2)):
+                    print(list2[i][0])
+                    if (list2[i][0] == args.ip):
+                        akshay = 1
+                        #abuse_check(args.ip, days)
+                    else:
+                        print("ip present")
+                if (akshay != 1) :
+                    abuse_check(args.ip, days)
+                get_report()
+            except:
+                print("Old repo File not found")
         else:
             sys.exit("A Private IP will return no result...")
     else:
