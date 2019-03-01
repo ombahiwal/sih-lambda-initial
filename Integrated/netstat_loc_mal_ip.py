@@ -13,7 +13,7 @@ def foo():
     print("All Listening Ports: ")
     operating_system = platform.system()
     command_win = ['netstat', '-n']
-    command_linux = ['netstat', '-tupnc']
+    command_linux = ['netstat', '-tupn']
     command_mac = ['netstat', '-p', 'tcp', '-n']
     if operating_system == 'Darwin':
         command = command_mac

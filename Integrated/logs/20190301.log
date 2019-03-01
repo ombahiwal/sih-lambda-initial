@@ -223,3 +223,252 @@
 [INFO] 2019-03-01 20:39:15 - User-Agent used: IP2GeoLocation 2.0.4
 [ERROR] 2019-03-01 20:39:15 - An unexpected error occurred decode() argument 1 must be str, not None!
 [ERROR] 2019-03-01 20:39:15 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:45:49 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:45:50 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-03-01 21:45:50 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-03-01 21:45:57 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:45:57 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-03-01 21:45:57 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-03-01 21:46:04 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:05 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2019-03-01 21:46:05 - Geolocation information has been retrieved for 52.109.60.3(52.109.60.3).
+[INFO] 2019-03-01 21:46:11 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:11 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:11 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:11 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:18 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:18 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:18 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:18 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:24 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:25 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:25 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:25 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:31 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:31 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:31 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:31 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:37 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:37 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:37 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:37 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:44 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:44 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:44 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:44 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:50 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:50 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:50 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:50 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:46:57 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:46:57 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:46:57 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:46:57 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:03 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:04 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:04 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:04 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:10 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:10 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:10 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:10 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:16 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:16 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:16 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:16 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:23 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:23 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:23 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:23 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:30 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:30 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:30 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:30 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:36 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:36 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:36 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:36 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:43 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:43 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:43 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:43 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:50 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:51 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:51 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:51 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:47:58 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:47:58 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:47:58 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:47:58 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:05 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:05 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:05 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:05 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:12 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:12 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:12 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:12 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:19 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:19 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:19 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:19 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:26 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:26 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:26 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:26 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:33 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:34 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:34 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:34 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:40 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:41 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:41 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:41 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:47 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:47 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:47 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:47 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:48:53 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:48:53 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:48:53 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:48:53 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:00 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:00 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:00 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:00 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:07 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:07 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:07 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:07 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:14 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:14 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:14 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:14 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:21 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:21 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:21 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:21 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:28 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:28 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:28 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:28 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:35 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:35 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:35 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:35 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:42 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:42 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:42 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:42 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:48 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:48 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:48 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:48 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:49:55 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:49:55 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:49:55 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:49:55 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:01 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:01 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:01 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:01 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:08 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:08 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:08 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:08 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:14 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:14 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:14 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:14 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:21 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:21 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:21 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:21 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:27 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:28 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:28 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:28 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:34 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:34 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:34 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:34 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:41 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:41 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:41 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:41 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:47 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:47 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:47 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:47 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:50:53 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:50:53 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:50:53 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:50:53 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:00 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:00 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:00 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:00 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:06 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:06 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:06 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:06 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:12 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:12 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:12 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:12 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:18 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:18 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:18 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:18 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:23 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:24 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:24 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:24 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:29 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:29 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:29 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:29 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:35 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:35 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:35 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:35 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:41 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:41 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:41 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:41 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:48 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:48 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:48 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:48 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:51:55 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:51:55 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:51:55 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:51:55 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:02 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:02 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:02 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:02 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:09 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:09 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:09 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:09 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:16 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:16 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:16 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:16 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:23 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:23 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:23 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:23 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:31 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:31 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:31 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:31 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:38 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:38 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:38 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:38 - Retrieving IP Geolocation information failed.
+[INFO] 2019-03-01 21:52:45 - Retrieving 52.109.60.3 Geolocation..
+[INFO] 2019-03-01 21:52:45 - User-Agent used: IP2GeoLocation 2.0.4
+[ERROR] 2019-03-01 21:52:46 - An unexpected error occurred decode() argument 1 must be str, not None!
+[ERROR] 2019-03-01 21:52:46 - Retrieving IP Geolocation information failed.
