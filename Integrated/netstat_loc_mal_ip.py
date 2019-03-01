@@ -1,8 +1,7 @@
 import platform
 import subprocess
 import csv
-
-
+import pickle
 
 print("All Listening Ports: ")
 operating_system = platform.system()
@@ -51,8 +50,10 @@ del two
 del three
 del text
 print(output_in_list)
+output_in_list.pop()
 length_output = len(output_in_list)
 print("Netstat Done..")
+# Logic to write the data into a file
 with open("main_output.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerows(output_in_list)
