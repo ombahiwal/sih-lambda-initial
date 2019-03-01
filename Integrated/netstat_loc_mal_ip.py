@@ -113,7 +113,7 @@ def foo():
         p = subprocess.Popen(command, stdout=subprocess.PIPE)
         text = p.stdout.read()
     retcode = p.wait()
-    print("Test Finished.")
+    print("Test Finished.\nGenysis NAT")
     threading.Timer(WAIT_SECONDS, foo).start()
 
 foo()
