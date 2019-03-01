@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import csv
 
-# import basemap
+import basemap
 
 
 
@@ -35,19 +35,39 @@ class Ui_MainWindow(object):
         self.tableWidget.setTextElideMode(QtCore.Qt.ElideLeft)
         self.tableWidget.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollPerItem)
         self.tableWidget.setWordWrap(False)
-        self.tableWidget.setRowCount(rowlen-1)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(0, 0, length-64, 40))
+        self.label.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(30, 192, 244, 255), stop:1 rgba(255, 255, 255, 255));")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(((length-66)/2)-80,breadth-105, 160, 20))
+        self.pushButton.setObjectName("pushButton")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        list1 = get_csv_to_list("../Integrated/main_output.csv")
+        list1 = list1[0:-1]
+        rowlen = len(list1)
+        columnlen = len(list1[0])
+        self.tableWidget.setRowCount(rowlen - 1)
         self.tableWidget.setColumnCount(columnlen)
         self.tableWidget.setObjectName("tableWidget")
         item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignVCenter)
+        item.setTextAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignVCenter)
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignVCenter)
+        item.setTextAlignment(QtCore.Qt.AlignJustify | QtCore.Qt.AlignVCenter)
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignVCenter)
+        item.setTextAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignVCenter)
         self.tableWidget.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(4, item)
@@ -62,23 +82,7 @@ class Ui_MainWindow(object):
         self.tableWidget.horizontalHeader().setDefaultSectionSize(190)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(120)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(0, 0, length-64, 40))
-        self.label.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(30, 192, 244, 255), stop:1 rgba(255, 255, 255, 255));")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(((length-66)/2)-80,breadth-105, 160, 20))
-        self.pushButton.setObjectName("pushButton")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        self.retranslateUi(MainWindow)
-        self.tableWidget.viewport().update()
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.tableWidget.setSortingEnabled(True)
@@ -94,13 +98,13 @@ class Ui_MainWindow(object):
         self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.label.setText(_translate("MainWindow", "Genysis Network Analysis Tool"))
         self.pushButton.setText(_translate("MainWindow", "Display Map"))
-        # self.pushButton.clicked.connect(basemap.calling)
+        self.pushButton.clicked.connect(basemap.calling)
 
 def get_csv_to_list(file_name):
     with open(file_name, 'r') as f:
         reader = csv.reader(f)
         your_list = list(reader)
-    return your_list
+    return your_list[:-1]
 
 if __name__ == "__main__":
     import sys
@@ -112,12 +116,6 @@ if __name__ == "__main__":
     length = size.width()
     breadth = size.height()
     # getting CSV to list
-    list1 = get_csv_to_list("../Integrated/main_output.csv")
-    list1 = list1[0:-1]
-#    print(list1)
-    # list1=[["Sr no","IP Address","Foriegn IP","Country"],[1,4654654,"gsgesrgdfgfd","ewraf5a4ewf6"],[2,894654654,"fsadfsdfadsf","dfasd6f465ds"]]
-    rowlen=len(list1)
-    columnlen=len(list1[0])
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
