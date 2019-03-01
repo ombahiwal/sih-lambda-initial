@@ -101,6 +101,7 @@ def foo():
             temp = output_in_list[1][4].split(".")
             temp2 = temp[-1]
             temp2 = temp2.split(':')
+            temp = temp[0:-1]
             temp.append(temp2[0])
             temp = str.join('.', temp)
             foriegn_ips.append(temp)
