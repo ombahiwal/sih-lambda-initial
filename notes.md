@@ -15,3 +15,5 @@
 * Base Map Installation on Ubuntu
   * sudo apt-get install libgeos-dev
   * pip3 install --user https://github.com/matplotlib/basemap/archive/master.zip
+   
+* Qt4 TableView Model -https://gist.github.com/345161974/dd5003ed9b706adc557ee12e6a344c6e
