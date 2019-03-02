@@ -34,9 +34,11 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        #if counter!=0:
+         #   list1 = get_csv_to_list("../Integrated/main_output.csv")
+        #else:
         list1 = get_csv_to_list("../Integrated/main_output.csv")
-        print(list1)
-        #list1 = list1[0:len(list1)]
+        list1 = list1[0:len(list1)]
         #print (list1)
         #list1 = list1[0:-1]
         rowlen = len(list1)
@@ -66,11 +68,21 @@ class Ui_MainWindow(object):
         self.tableWidget.setRowCount(rowlen - 1)
         self.tableWidget.setColumnCount(columnlen)
         self.tableWidget.setObjectName("tableWidget")
-
-        for k in range(columnlen):
-            item = QtWidgets.QTableWidgetItem()
-            self.tableWidget.setHorizontalHeaderItem(k, item)
-
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignVCenter)
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignJustify | QtCore.Qt.AlignVCenter)
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignVCenter)
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
         for i in range(rowlen):
             for j in range(columnlen):
@@ -99,6 +111,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(basemap.calling)
         self.pushButton_2.setText(_translate("MainWindow", "Reload"))
         self.pushButton_2.clicked.connect(self.retranslateUi)
+       # counter+=1
 
 def get_csv_to_list(file_name):
     with open(file_name, 'r') as f:
