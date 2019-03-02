@@ -28,7 +28,7 @@ def foo():
     # output fetched in the "Text" Variable as a string, later data can be extracted with regular expressions.
     # one = line by line
     one = list(text.decode().split("\n"))
-    # Get Column Names
+    # Get Column Namess
     two = one[3].split(" ")
     three = []
     two = one[1]
@@ -41,6 +41,9 @@ def foo():
     two = two[0].split(" ")
     two.extend(temp2)
     temp2 = two
+    test = str(temp2[3]+" "+ temp2[4])
+    del temp2[4]
+    temp2[3] = test
     output_in_list = []
 
     for j in range(1, len(one)):
