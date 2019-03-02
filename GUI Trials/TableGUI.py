@@ -35,7 +35,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         list1 = get_csv_to_list("../Integrated/main_output.csv")
-        list1 = list1[0:-1]
+        list1 = list1[0:len(list1)]
+        print (list1)
+        #list1 = list1[0:-1]
         rowlen = len(list1)
         columnlen = len(list1[0])
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
@@ -112,7 +114,7 @@ def get_csv_to_list(file_name):
         reader = csv.reader(f)
         your_list = list(reader)
         f.close()
-    return your_list[:-1]
+    return your_list[:len(your_list)]
 
 
 if __name__ == "__main__":
