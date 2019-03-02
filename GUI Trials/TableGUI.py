@@ -8,10 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import csv
-
-
 import basemap
-list1=[]
 
 
 class Ui_MainWindow(object):
@@ -25,22 +22,6 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(30, 192, 244, 255), stop:1 rgba(255, 255, 255, 255));")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        self.retranslateUi(MainWindow)
-
-    def retranslateUi(self, MainWindow):
-        list1 = get_csv_to_list("../Integrated/main_output.csv")
-        print(list1)
-        #list1 = list1[0:len(list1)]
-        #print (list1)
-        #list1 = list1[0:-1]
-        rowlen = len(list1)
-        columnlen = len(list1[0])
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
         self.tableWidget.setGeometry(QtCore.QRect(0, 40, length-66, breadth-150))
         self.tableWidget.setAutoFillBackground(True)
@@ -57,48 +38,60 @@ class Ui_MainWindow(object):
         self.tableWidget.setTextElideMode(QtCore.Qt.ElideLeft)
         self.tableWidget.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollPerItem)
         self.tableWidget.setWordWrap(False)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(((length+150)/2)-80,breadth-125, 140, 20))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(((length -150) / 2) - 80, breadth - 125, 140, 20))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.tableWidget.setRowCount(rowlen - 1)
-        self.tableWidget.setColumnCount(columnlen)
-        self.tableWidget.setObjectName("tableWidget")
-
-        for k in range(columnlen):
-            item = QtWidgets.QTableWidgetItem()
-            self.tableWidget.setHorizontalHeaderItem(k, item)
-
-        item = QtWidgets.QTableWidgetItem()
-        for i in range(rowlen):
-            for j in range(columnlen):
-                self.tableWidget.setItem(i, j, item)
-                item = QtWidgets.QTableWidgetItem()
+        __sortingEnabled = self.tableWidget.isSortingEnabled()
+        self.tableWidget.setSortingEnabled(False)
+        self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setDefaultSectionSize(190)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(120)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
-
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.tableWidget.setSortingEnabled(True)
-        for i in range(columnlen):
-            item = self.tableWidget.horizontalHeaderItem(i)
-            item.setText(_translate("MainWindow", list1[0][i]))
-        __sortingEnabled = self.tableWidget.isSortingEnabled()
-        self.tableWidget.setSortingEnabled(False)
-        for i in range(1,rowlen):
-            for j in range(columnlen):
-                item = self.tableWidget.item(i-1, j)
-                item.setText(_translate("MainWindow",str(list1[i][j])))
-        self.tableWidget.setSortingEnabled(__sortingEnabled)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(((length+150)/2)-80,breadth-100, 140, 20))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(((length -150) / 2) - 80, breadth - 100, 140, 20))
+        self.pushButton_2.setObjectName("pushButton_2")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        _translate = QtCore.QCoreApplication.translate
         self.label.setText(_translate("MainWindow", "Genysis Network Analysis Tool"))
         self.pushButton.setText(_translate("MainWindow", "Display Map"))
         self.pushButton.clicked.connect(basemap.calling)
         self.pushButton_2.setText(_translate("MainWindow", "Reload"))
         self.pushButton_2.clicked.connect(self.retranslateUi)
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.retranslateUi(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        list1 = get_csv_to_list("../Integrated/main_output.csv")
+        print(list1)
+        rowlen = len(list1)
+        columnlen = len(list1[0])
+        self.tableWidget.setRowCount(rowlen - 1)
+        self.tableWidget.setColumnCount(columnlen)
+        self.tableWidget.setObjectName("tableWidget")
+        for k in range(columnlen):
+            item = QtWidgets.QTableWidgetItem()
+            self.tableWidget.setHorizontalHeaderItem(k, item)
+        item = QtWidgets.QTableWidgetItem()
+        for i in range(rowlen):
+            for j in range(columnlen):
+                self.tableWidget.setItem(i, j, item)
+                item = QtWidgets.QTableWidgetItem()
+        _translate = QtCore.QCoreApplication.translate
+        for i in range(columnlen):
+            item = self.tableWidget.horizontalHeaderItem(i)
+            item.setText(_translate("MainWindow", list1[0][i]))
+        for i in range(1,rowlen):
+            for j in range(columnlen):
+                item = self.tableWidget.item(i-1, j)
+                item.setText(_translate("MainWindow",str(list1[i][j])))
+
+
 
 def get_csv_to_list(file_name):
     with open(file_name, 'r') as f:
