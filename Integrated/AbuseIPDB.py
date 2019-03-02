@@ -1,15 +1,16 @@
 #! /bin/python/env
-import re
+import argparse
+import codecs
 import csv
+import ipaddress
+import json
+import os.path
+import re
+import socket
 import sys
 import time
-import json
-import codecs
-import socket
-import argparse
+
 import requests
-import ipaddress
-from sys import argv
 
 api_key = 'Z1vdRXc5r21VM0qTOiIdrT20U1aivVoxAj5ejyvw'
 
@@ -83,18 +84,15 @@ def get_cat(x):
 
 
 def abuse_check(IP, days):
-    request = 'https://www.abuseipdb.com/check/%s/json?key=%s&days=%s' % (
-        IP, api_key, days)
+    request = 'https://www.abuseipdb.com/check/%s/json?key=%s&days=%s' % (IP, api_key, days)
     # DEBUG
     # print(request)
     r = requests.get(request)
     # DEBUG
     # print(r.json())
-
     data = r.json()
     if not data:
-        logs.append({'ip': IP, 'category': [], 'created': '', 'country': '',
-                     'isoCode': '', 'isWhitelisted': False, 'abuseConfidenceScore': 0})
+        logs.append({'ip': IP, 'category': [], 'created': '', 'country': '','isoCode': '', 'isWhitelisted': False, 'abuseConfidenceScore': 0})
     elif type(data) is list:
         for record in data:
             logs.append(record)
@@ -104,8 +102,6 @@ def abuse_check(IP, days):
 
 def get_report():
     log_check = None
-    fields = []
-    rows = []
     # Convert category numbers to words
     if args.translate:
         for log in logs:
@@ -144,52 +140,52 @@ def get_report():
     else:
         for log in logs:
             #print(log)
-            list1 = []
-            csvreader = []
+            list2 = []
             if (log_check == None):
-                list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
+                list2 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
                 if (log['isWhitelisted'] == True):
-                    with open('example_output.csv', 'a') as csvfile:
-                         writer = csv.writer(csvfile)
-                         writer.writerows([list1])
-                    with open('white_listed.csv', 'a') as csvfile2:
-                         writer = csv.writer(csvfile2)
-                         writer.writerows([list1])
+                    print("0",)
+                    with open('example_output.csv', 'a', newline='') as csvfile3:
+                        writer = csv.writer(csvfile3)
+                        writer.writerows([list2])
+                    with open('white_listed.csv', 'a', newline='') as csvfile4:
+                        writer = csv.writer(csvfile4)
+                        writer.writerows(list2)
                 else:
-                    with open('example_output.csv', 'a') as csvfile3:
-                         writer = csv.writer(csvfile3)
-                         writer.writerows([list1])
-                    with open('black_listed.csv', 'a') as csvfile4:
-                         writer = csv.writer(csvfile4)
-                         writer.writerows([list1])
-            elif (log['ip'] == log_check ):
-                exdict={}
-                exdict=log
+                    print(log["abuseConfidenceScore"])
+                    with open('example_output.csv', 'a', newline='') as csvfile5:
+                        writer = csv.writer(csvfile5)
+                        writer.writerows([list2])
+                    with open('black_listed.csv', 'a', newline='') as csvfile6:
+                        writer = csv.writer(csvfile6)
+                        writer.writerows([list2])
+            elif (log['ip'] == log_check):
+                pass
             else:
-                list1 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
-                if (log['isWhitelisted'] == True):
-                    with open('example_output.csv', 'a') as csvfile:
-                         writer = csv.writer(csvfile)
-                         writer.writerows([list1])
-                    with open('white_listed.csv', 'a') as csvfile2:
-                         writer = csv.writer(csvfile2)
-                         writer.writerows([list1])
+                list2 = [log["ip"],log["category"],log['country'],log["isoCode"],log["abuseConfidenceScore"],log['isWhitelisted']]
+                if(log['isWhitelisted'] == True):
+                    print("0","")
+                    with open('example_output.csv', 'a', newline='') as csvfile3:
+                        writer = csv.writer(csvfile3)
+                        writer.writerows([list2])
+                    with open('white_listed.csv', 'a', newline='') as csvfile4:
+                        writer = csv.writer(csvfile4)
+                        writer.writerows([list2])
                 else:
-                    with open('example_output.csv', 'a') as csvfile3:
-                         writer = csv.writer(csvfile3)
-                         writer.writerows([list1])
-                    with open('black_listed.csv', 'a') as csvfile4:
-                         writer = csv.writer(csvfile4)
-                         writer.writerows([list1])
-            #with open('example_output.txt', 'w') as file:
-                 #file.write(json.dumps(log))
+                    print(log["abuseConfidenceScore"])
+                    with open('example_output.csv', 'a', newline='') as csvfile5:
+                        writer = csv.writer(csvfile5)
+                        writer.writerows([list2])
+                    with open('black_listed.csv', 'a', newline='') as csvfile6:
+                        writer = csv.writer(csvfile6)
+                        writer.writerows([list2])
             log_check = log['ip']
         pass
-	#f = open("demofile.txt", "w")
-	#f.write(log)						or log_check == None
 
-def main():
-    akshay = 0
+
+def main() :
+    check_ip = 0
+    data_ip = None
     if args.days:
         days = args.days
     else:
@@ -214,34 +210,38 @@ def main():
                 if count == 59:
                     time.sleep(60)
                     count = 0
-                with open('example_output.csv', 'r') as csvfile1:
-                     csvreader = csv.reader(csvfile1)
-                     list2 = list(csvreader)
-                for i in range(len(list2)):
-                    if (list2[i][0] == ip):
-                        print("ip present")
-                    else:
-                        abuse_check(ip, days)
+                abuse_check(ip, days)
                 count += 1
         get_report()
     elif args.ip:
+        c_ip = args.ip
         if ipaddress.ip_address(args.ip).is_private is False:
-            try:
+            if os.path.exists('example_output.csv') is True:
                 with open('example_output.csv', 'r') as csvfile1:
-                     csvreader = csv.reader(csvfile1)
-                     list2 = list(csvreader)
-                for i in range(len(list2)):
-                    print(list2[i][0])
-                    if (list2[i][0] == args.ip):
-                        akshay = 1
-                        #abuse_check(args.ip, days)
+                    csvreader = csv.reader(csvfile1)
+                    list1 = list(csvreader)
+                for i in range(len(list1)):
+                    #print(len(list1))
+                    if list1[i][0] == args.ip:
+                        #print("-------------------------------")
+                        check_ip = 1
+                        if list1[i][5] == True:
+                            data_ip=0
+                        else:
+                            data_ip=list1[i][4]
                     else:
-                        print("ip present")
-                if (akshay != 1) :
-                    abuse_check(args.ip, days)
+                        pass
+                if check_ip != 1:
+                    #print("calling abuse_check")
+                    abuse_check(c_ip, days)
+                    get_report()
+                else:
+                    print(data_ip)
+            else:
+                    #with open('example_output.csv', 'w') as csvfile2:
+                    #csvfile2.close()
+                abuse_check(args.ip, days)
                 get_report()
-            except:
-                print("Old repo File not found")
         else:
             sys.exit("A Private IP will return no result...")
     else:
