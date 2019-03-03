@@ -95,13 +95,21 @@ def foo():
 
     # VT
     if operating_system == 'Linux':
-        pid = (output_in_list[6].split('/'))
-        command = ['python3', 'vt_file_scan.py', '-s', pid]
-        p = subprocess.Popen(command, stdout=subprocess.PIPE)
-        print("Loading...")
-        text = p.stdout.read()
-        print(text)
-        retcode = p.wait()
+        for i in range(1, len(output_in_list)):
+            if len(output_in_list[i][6].split('/')) == 2:
+                pid = (output_in_list[i][6].split('/'))
+                command = ['python3', 'vt_file_scan.py', '-s', pid]
+                p = subprocess.Popen(command, stdout=subprocess.PIPE)
+                print("Loading...")
+                text = p.stdout.read()
+                print(r.json())
+                print(text)
+                r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis', json={"key": "value"})
+                if text == 'None':
+                    p = subprocess.Popen(command, stdout=subprocess.PIPE)
+                    print("Loading ML...")
+                    text = p.stdout.read()
+                retcode = p.wait()
 
     # Code for IP Location
 
