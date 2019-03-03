@@ -156,6 +156,7 @@ def foo():
         text = p.stdout.read()
         # text = text[len(text)-15:]
         text = text[-50:-1]
+        print(text)
         temp = str(text)
         temp = list(temp)
         location = []
@@ -168,7 +169,7 @@ def foo():
                     if comma == 2:
                         break
                 flag = True
-                location.append(temp[i+1])
+                location.append(temp[i])
 
         location = location[1:-1]
         location = ''.join(location)
@@ -209,7 +210,9 @@ def foo():
         temp = temp[2:]
         output_in_list[i][-1] = temp
 
-    # Virus Total
+# Virus Total
+
+
 
 
     #code for country lookup
