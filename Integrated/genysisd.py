@@ -93,6 +93,16 @@ def foo():
     print("IP Parsing Done..")
 
 
+    # VT
+    if operating_system == 'Linux':
+        pid = (output_in_list[6].split('/'))
+        command = ['python3', 'vt_file_scan.py', '-s', pid]
+        p = subprocess.Popen(command, stdout=subprocess.PIPE)
+        print("Loading...")
+        text = p.stdout.read()
+        print(text)
+        retcode = p.wait()
+
     # Code for IP Location
 
     # output_in_list[0].append('Location')
