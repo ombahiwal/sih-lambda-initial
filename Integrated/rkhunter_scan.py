@@ -3,6 +3,7 @@ command = ['rkhunter', '--check', '--sk']
 
 p = subprocess.Popen(command, stdout=subprocess.PIPE)
 print("Running RK Hunter test...")
-text = p.stdout.read()
-print(text)
 retcode = p.wait()
+file = open('/var/log/rkhunter.log', "r")
+text = file.read()
+print(text)
