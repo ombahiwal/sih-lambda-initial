@@ -95,17 +95,17 @@ def foo():
 
     # Code for IP Location
 
-    output_in_list[0].append('Location')
-    for i in range(0, len(foriegn_ips)):
-        command = ['python3','./IPGeoLocation-master/ipgeolocation.py','-t',foriegn_ips[i]]
-        p = subprocess.Popen(command, stdout=subprocess.PIPE)
-        text = p.stdout.read()
-        # text = text[len(text)-15:]
-        text = text[-25:-10]
-        temp = str(text)
-        temp = temp[2:-1]
-        output_in_list[i+1].append(temp)
-        retcode = p.wait()
+    # output_in_list[0].append('Location')
+    # for i in range(0, len(foriegn_ips)):
+    #     command = ['python3','./IPGeoLocation-master/ipgeolocation.py','-t',foriegn_ips[i]]
+    #     p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    #     text = p.stdout.read()
+    #     # text = text[len(text)-15:]
+    #     text = text[-25:-10]
+    #     temp = str(text)
+    #     temp = temp[2:-1]
+    #     output_in_list[i+1].append(temp)
+    #     retcode = p.wait()
 
 
     # sample_ip = output_in_list[1][4]
@@ -170,6 +170,7 @@ def foo():
     # abuse IP Code
     output_in_list[0].append('AbuseIP ConScore')
     print("Abuse IP test Running...")
+    print(foriegn_ips)
     for i in range(0, len(foriegn_ips)):
         print("Testing : ",foriegn_ips[i])
         command = ['python3' , 'AbuseIPDB.py','-i',foriegn_ips[i]]
