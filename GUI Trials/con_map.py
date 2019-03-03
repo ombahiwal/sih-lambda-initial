@@ -36,7 +36,7 @@ def get_csv_to_list(file_name):
     return your_list[:len(your_list)]
 
 
-list1 = get_csv_to_list("file2.csv")
+list1 = get_csv_to_list("basemap.csv")
 rowlen=len(list1)
 print(list1)
 columnlen=len(list1[0])
