@@ -102,10 +102,10 @@ def foo():
                 p = subprocess.Popen(command, stdout=subprocess.PIPE)
                 print("Loading...")
                 text = p.stdout.read()
-                print(r.json())
+
                 print(text)
                 r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/insert', json={"id": "value"})
-
+                print(r.json())
                 if text == 'None':
                     p = subprocess.Popen(command, stdout=subprocess.PIPE)
                     print("Loading ML...")
