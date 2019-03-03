@@ -209,6 +209,9 @@ def foo():
         temp = temp[2:]
         output_in_list[i][-1] = temp
 
+    # Virus Total
+
+
     #code for country lookup
     print("whois country lookup...")
     output_in_list[0].append('Country')
@@ -223,7 +226,7 @@ def foo():
         except:
             print("Private connection found at ",foriegn_ips[i] )
             output_in_list[i+1].append('-local-')
-            output_in_list[i+1].append('-local-' )
+            output_in_list[i+1].append('-local-')
     print("Country Lookup Done..")
 
         # Logic to write the data into a file
