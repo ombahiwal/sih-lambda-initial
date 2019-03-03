@@ -97,28 +97,28 @@ def foo():
     print("IP Parsing Done..")
 
 
-    # VT
-    if operating_system == 'Linux':
-        try:
-            output_in_list[0].append('VT result')
-            for i in range(1, len(output_in_list)):
-                if len(output_in_list[i][6].split('/')) == 2:
-                    pid = (output_in_list[i][6].split('/'))[0]
-                    command = ['python3', 'vt_file_scan.py', '-s', pid]
-                    p = subprocess.Popen(command, stdout=subprocess.PIPE)
-                    print("Loading...")
-                    text = p.stdout.read()
-                    print(text)
-                    output_in_list[i].append(text)
-                    r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/', json={"id": output_in_list[i][6], "Malicious": str(text)})
-                    print(r.json())
-                    # if text == 'None':
-                    #     p = subprocess.Popen(command, stdout=subprocess.PIPE)
-                    #     print("Loading ML...")
-                    #     text = p.stdout.read()
-                    retcode = p.wait()
-        except:
-            print("Some error Occured in VT")
+    # # VT
+    # if operating_system == 'Linux':
+    #     try:
+    #         output_in_list[0].append('VT result')
+    #         for i in range(1, len(output_in_list)):
+    #             if len(output_in_list[i][6].split('/')) == 2:
+    #                 pid = (output_in_list[i][6].split('/'))[0]
+    #                 command = ['python3', 'vt_file_scan.py', '-s', pid]
+    #                 p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    #                 print("Loading...")
+    #                 text = p.stdout.read()
+    #                 print(text)
+    #                 output_in_list[i].append(text)
+    #                 r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/', json={"id": output_in_list[i][6], "Malicious": str(text)})
+    #                 print(r.json())
+    #                 # if text == 'None':
+    #                 #     p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    #                 #     print("Loading ML...")
+    #                 #     text = p.stdout.read()
+    #                 retcode = p.wait()
+    #     except:
+    #         print("Some error Occured in VT")
     # Code for IP Location
 
     # output_in_list[0].append('Location')
