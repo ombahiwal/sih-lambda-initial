@@ -9,7 +9,11 @@ import os
 import signal
 
 WAIT_SECONDS = 5
-
+def gui_Call():
+    gui_file = "../GUI Trials/FinalGUI.py"
+    command = ['python3' , gui_file]
+    p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    retcode = p.wait()
 def foo():
     print('*GENYSIS NAT*\n--- Executing Main Loop Thread --- ')
     print(time.ctime())
@@ -255,7 +259,9 @@ def foo():
         print("File write Done.. \nsaved as main_output.csv")
     print("Test Finished.\nGenysis NAT")
     threading.Timer(WAIT_SECONDS, foo).start()
+gui_Call()
 foo()
+
 
 
 
