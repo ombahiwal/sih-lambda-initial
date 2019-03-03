@@ -81,9 +81,9 @@ def foo():
             temp = str.join('.', temp)
             foriegn_ips.append(temp)
 
-    elif operating_system == 'Linux':
+    elif operating_system == 'Linux' or 'Windows':
         for i in range(1, len(output_in_list)-1):
-            temp = output_in_list[1][4].split(".")
+            temp = output_in_list[i][4].split(".")
             temp2 = temp[-1]
             temp2 = temp2.split(':')
             temp = temp[0:-1]
