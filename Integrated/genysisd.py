@@ -110,7 +110,7 @@ def foo():
                     text = p.stdout.read()
                     print(text)
                     output_in_list[i].append(text)
-                    r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/', json={"id": output_in_list[i][6], "Malicious": text})
+                    r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/', json={"id": output_in_list[i][6], "Malicious": str(text)})
                     print(r.json())
                     # if text == 'None':
                     #     p = subprocess.Popen(command, stdout=subprocess.PIPE)
