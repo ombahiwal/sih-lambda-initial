@@ -10,6 +10,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import csv
 import con_map
 import con_graph
+import rkhunter_scan
 
 
 class Ui_MainWindow(object):
@@ -72,6 +73,7 @@ class Ui_MainWindow(object):
         self.Basic_Connection_Map.setObjectName("Basic_Connection_Map")
         self.Basic_Connection_Map.clicked.connect(con_map.calling)
 
+
         self.tabWidget.addTab(self.Basic_View, "")
         self.Detailed_View = QtWidgets.QWidget()
         self.Detailed_View.setObjectName("Detailed_View")
@@ -93,17 +95,19 @@ class Ui_MainWindow(object):
         self.Detail_Network_Graph = QtWidgets.QPushButton(self.Detailed_View)
         self.Detail_Network_Graph.setGeometry(QtCore.QRect((length-66)/2+200, breadth-145,120,25))
         self.Detail_Network_Graph.setObjectName("Detail_Network_Graph")
+        self.Detail_Network_Graph.clicked.connect(con_graph.map)
         self.Detail_Reload_List = QtWidgets.QPushButton(self.Detailed_View)
         self.Detail_Reload_List.setGeometry(QtCore.QRect((length-66)/2-400,breadth-145,120,25))
         self.Detail_Reload_List.setObjectName("Detail_Reload_List")
         self.Detail_Connection_Map = QtWidgets.QPushButton(self.Detailed_View)
         self.Detail_Connection_Map.setGeometry(QtCore.QRect((length-66)/2-100, breadth-145,120,25))
         self.Detail_Connection_Map.setObjectName("Detail_Connection_Map")
+        self.Detail_Connection_Map.clicked.connect(con_map.calling)
         self.tabWidget.addTab(self.Detailed_View, "")
         self.System_Scan = QtWidgets.QWidget()
         self.System_Scan.setObjectName("System_Scan")
         self.Start_Scan = QtWidgets.QPushButton(self.System_Scan)
-        self.Start_Scan.setGeometry(QtCore.QRect(150,breadth - 145, 120, 25 ))
+        self.Start_Scan.setGeometry(QtCore.QRect(350,breadth - 145, 120, 25 ))
         font = QtGui.QFont()
         font.setFamily("Ubuntu")
         font.setPointSize(11)
@@ -129,14 +133,14 @@ class Ui_MainWindow(object):
         self.Start_Scan.setFont(font)
         self.Start_Scan.setObjectName("Start_Scan")
         self.Stop_Scan = QtWidgets.QPushButton(self.System_Scan)
-        self.Stop_Scan.setGeometry(QtCore.QRect(400, breadth - 145, 120, 25))
+        self.Stop_Scan.setGeometry(QtCore.QRect(900-50, breadth - 145, 120, 25))
         self.Stop_Scan.setObjectName("Stop_Scan")
-        self.pushButton = QtWidgets.QPushButton(self.System_Scan)
+        '''self.pushButton = QtWidgets.QPushButton(self.System_Scan)
         self.pushButton.setGeometry(QtCore.QRect(650,breadth-145, 120, 25))
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.System_Scan)
         self.pushButton_2.setGeometry(QtCore.QRect(900, breadth - 145, 120, 25))
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_2.setObjectName("pushButton_2")'''
 
         self.tabWidget.addTab(self.System_Scan, "")
 
@@ -170,7 +174,7 @@ class Ui_MainWindow(object):
         self.Blacklist.horizontalHeader().setMinimumSectionSize(200)
         self.Blacklist.horizontalHeader().setStretchLastSection(True)
         self.Blacklist_label = QtWidgets.QLabel(self.Classification)
-        self.Blacklist_label.setGeometry(QtCore.QRect(20, 20, 120, 25))
+        self.Blacklist_label.setGeometry(QtCore.QRect(20, 20, 200, 25))
         font = QtGui.QFont()
         font.setFamily("Ubuntu")
         font.setPointSize(11)
@@ -181,7 +185,7 @@ class Ui_MainWindow(object):
         self.Blacklist_label.setAlignment(QtCore.Qt.AlignCenter)
         self.Blacklist_label.setObjectName("Blacklist_label")
         self.Whitelist_Label = QtWidgets.QLabel(self.Classification)
-        self.Whitelist_Label.setGeometry(QtCore.QRect(length-700,20,120,25))
+        self.Whitelist_Label.setGeometry(QtCore.QRect(length-700,20,200,25))
         self.Whitelist_Label.setAlignment(QtCore.Qt.AlignCenter)
         self.Whitelist_Label.setObjectName("Whitelist_Label")
         self.Whitelist = QtWidgets.QTableWidget(self.Classification)
@@ -245,26 +249,32 @@ class Ui_MainWindow(object):
         self.Basic_View_Table.setSortingEnabled(True)
         self.Basic_Reload_List.setText(_translate("MainWindow", "Reload List"))
         self.Basic_Reload_List.clicked.connect(self.retranslateUi)
+
         self.Basic_Network_Graph.setText(_translate("MainWindow", "Network Graph"))
         self.Basic_Connection_Map.setText(_translate("MainWindow", "Connection Map"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Basic_View), _translate("MainWindow", "Basic View"))
         self.Detaile_view_list.setSortingEnabled(True)
         self.Detail_Network_Graph.setText(_translate("MainWindow", "Network Graph"))
         self.Detail_Reload_List.setText(_translate("MainWindow", "Reload List"))
+        self.Detail_Reload_List.clicked.connect(self.retranslateUi)
         self.Detail_Connection_Map.setText(_translate("MainWindow", "Connection Map"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Detailed_View), _translate("MainWindow", "Detailed View"))
+
         self.Start_Scan.setText(_translate("MainWindow", "Start Scan"))
+        self.Start_Scan.clicked.connect(rkhunter_scan.rk_hunter)
         self.Stop_Scan.setText(_translate("MainWindow", "Stop Scan"))
+
+
         self.System_scan_list.setSortingEnabled(True)
-        self.pushButton.setText(_translate("MainWindow", "Copy"))
-        self.pushButton_2.setText(_translate("MainWindow", "Save As"))
+        #self.pushButton.setText(_translate("MainWindow", "Copy"))
+        #self.pushButton_2.setText(_translate("MainWindow", "Save As"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.System_Scan), _translate("MainWindow", "System Scan"))
         item = self.Blacklist.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "PID"))
         item = self.Blacklist.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Application Name"))
-        self.Blacklist_label.setText(_translate("MainWindow", "Blacklisted"))
-        self.Whitelist_Label.setText(_translate("MainWindow", "Whitelist"))
+        self.Blacklist_label.setText(_translate("MainWindow", "BLACKLIST(Wall Of Shame)"))
+        self.Whitelist_Label.setText(_translate("MainWindow", "WHITELIST(Wall Of Fame)"))
         item = self.Whitelist.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "PID"))
         item = self.Whitelist.horizontalHeaderItem(1)
@@ -296,30 +306,95 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        list1 = get_csv_to_list("../Integrated/main_output.csv")
+
+        translate = QtCore.QCoreApplication.translate
+        listtemp = get_csv_to_list("../Integrated/main_output.csv")
+        list1=[]
+        for b in range(len(listtemp)):
+            l3 = []
+            l3.append(listtemp[b][6])
+            l3.append(listtemp[b][4])
+            l3.append(listtemp[b][10])
+            l3.append(listtemp[b][9])
+            l3.append(listtemp[b][8])
+            list1.append(l3)
         print(list1)
-        rowlen = len(list1)
-        columnlen = len(list1[0])
-        self.Basic_View_Table.setRowCount(rowlen - 1)
-        self.Basic_View_Table.setColumnCount(columnlen)
+        rowlen1 = len(list1)
+        columnlen1 = len(list1[0])
+        self.Basic_View_Table.setRowCount(rowlen1 - 1)
+        self.Basic_View_Table.setColumnCount(columnlen1)
         self.Basic_View_Table.setObjectName("Basic_View_Table")
-        for k in range(columnlen):
+        for k in range(columnlen1):
             item = QtWidgets.QTableWidgetItem()
             self.Basic_View_Table.setHorizontalHeaderItem(k, item)
         item = QtWidgets.QTableWidgetItem()
-        for i in range(rowlen):
-            for j in range(columnlen):
+        for i in range(rowlen1):
+            for j in range(columnlen1):
                 self.Basic_View_Table.setItem(i, j, item)
                 item = QtWidgets.QTableWidgetItem()
         _translate = QtCore.QCoreApplication.translate
-        for i in range(columnlen):
+        for i in range(columnlen1):
             item = self.Basic_View_Table.horizontalHeaderItem(i)
             item.setText(_translate("MainWindow", list1[0][i]))
-        for i in range(1,rowlen):
-            for j in range(columnlen):
-                item = self.Basic_View_Table.item(i-1, j)
-                item.setText(_translate("MainWindow",str(list1[i][j])))
+        for i in range(1, rowlen1):
+            for j in range(columnlen1):
+                item = self.Basic_View_Table.item(i - 1, j)
+                item.setText(_translate("MainWindow", str(list1[i][j])))
+
+
+
+        _translate = QtCore.QCoreApplication.translate
+        list2 = get_csv_to_list("../Integrated/main_output.csv")
+        #print(list2)
+        rowlen2 = len(list2)
+        columnlen2 = len(list2[0])
+        self.Detaile_view_list.setRowCount(rowlen2 - 1)
+        self.Detaile_view_list.setColumnCount(columnlen2)
+        self.Detaile_view_list.setObjectName("Basic_View_Table")
+        for k in range(columnlen2):
+            item = QtWidgets.QTableWidgetItem()
+            self.Detaile_view_list.setHorizontalHeaderItem(k, item)
+        item = QtWidgets.QTableWidgetItem()
+        for i in range(rowlen2):
+            for j in range(columnlen2):
+                self.Detaile_view_list.setItem(i, j, item)
+                item = QtWidgets.QTableWidgetItem()
+        _translate = QtCore.QCoreApplication.translate
+        for i in range(columnlen2):
+            item = self.Detaile_view_list.horizontalHeaderItem(i)
+            item.setText(_translate("MainWindow", list2[0][i]))
+        for i in range(1,rowlen2):
+            for j in range(columnlen2):
+                item = self.Detaile_view_list.item(i-1, j)
+                item.setText(_translate("MainWindow",str(list2[i][j])))
+
+
+
+
+        '''_translate = QtCore.QCoreApplication.translate
+        list3 = get_csv_to_list("../Integrated/black_listed.csv")
+        print(list3)
+        rowlen3 = len(list3)
+        columnlen3 = len(list2[0])
+        self.Blacklist.setRowCount(rowlen3 - 1)
+        self.Blacklist.setColumnCount(columnlen3)
+        self.Blacklist.setObjectName("Blacklist")
+        for k in range(columnlen3):
+            item = QtWidgets.QTableWidgetItem()
+            self.Blacklist.setHorizontalHeaderItem(k, item)
+        item = QtWidgets.QTableWidgetItem()
+        for i in range(rowlen3):
+            for j in range(columnlen3):
+                self.Blacklist.setItem(i, j, item)
+                item = QtWidgets.QTableWidgetItem()
+        _translate = QtCore.QCoreApplication.translate
+        for i in range(columnlen3):
+            item = self.Blacklist.horizontalHeaderItem(i)
+            item.setText(_translate("MainWindow", list3[0][i]))
+        for i in range(1,rowlen3):
+            for j in range(columnlen3):
+                item = self.Blacklist.item(i-1, j)
+                item.setText(_translate("MainWindow",str(list3[i][j])))'''
 
 
 
