@@ -212,14 +212,18 @@ def foo():
     #code for country lookup
     print("whois country lookup...")
     output_in_list[0].append('Country')
-    output_in_list[0].append('asn_description')
+    output_in_list[0].append('ASN Description')
     for i in range(0, len(foriegn_ips)):
-        obj = IPWhois(foriegn_ips[i])
-        results = obj.lookup_whois()
-        output_in_list[i+1].append(results['nets'][0]['country'])
-        output_in_list[i+1].append(results['asn_description'] )
 
-        pprint(results)
+        try:
+            obj = IPWhois(foriegn_ips[i])
+            results = obj.lookup_whois()
+            output_in_list[i+1].append(results['nets'][0]['country'])
+            output_in_list[i+1].append(results['asn_description'] )
+        except:
+            print("Private connection found at ",foriegn_ips[i] )
+            output_in_list[i+1].append('-local-')
+            output_in_list[i+1].append('-local-' )
     print("Country Lookup Done..")
 
         # Logic to write the data into a file
