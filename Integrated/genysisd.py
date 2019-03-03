@@ -1,3 +1,4 @@
+import requests
 import platform
 import subprocess
 import csv
@@ -6,8 +7,6 @@ from ipwhois import IPWhois
 import time, threading
 import os
 import signal
-from pprint import pprint
-
 
 WAIT_SECONDS = 5
 
@@ -156,7 +155,7 @@ def foo():
         text = p.stdout.read()
         # text = text[len(text)-15:]
         text = text[-50:-1]
-        print(text)
+        # print(text)/
         temp = str(text)
         temp = list(temp)
         location = []
@@ -209,10 +208,6 @@ def foo():
         temp = temp[:-3]
         temp = temp[2:]
         output_in_list[i][-1] = temp
-
-# Virus Total
-
-
 
 
     #code for country lookup

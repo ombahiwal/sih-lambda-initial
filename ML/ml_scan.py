@@ -10,7 +10,6 @@ for root, dirs, files in os.walk(directory):
         print("\nChecking : ", file, "in", directory)
         command = ['python3', 'malware-classification.py', directory+file]
         p = subprocess.Popen(command, stdout=subprocess.PIPE)
-
         text = p.stdout.read()
         retcode = p.wait()
         del p

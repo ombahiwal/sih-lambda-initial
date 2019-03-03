@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #
 # Copyright (c) 2016 Jun C. Valdez
-# Code is distrubuted under the terms of an MIT style license 
-# http://www.opensource.org/licenses/mit-license 
+# Code is distrubuted under the terms of an MIT style license
+# http://www.opensource.org/licenses/mit-license
 #
 
 import requests
