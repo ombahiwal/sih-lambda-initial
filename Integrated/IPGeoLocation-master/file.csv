@@ -1,0 +1,57 @@
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN      871/systemd-resolve 
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN      1216/sshd           
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN      3647/cupsd          
+tcp        0      0 localhost:mysql         0.0.0.0:*               LISTEN      1281/mysqld         
+tcp        0    518 coder-ideapad.msh:52292 117.18.237.66:https     FIN_WAIT1   -                   
+tcp        0      0 coder-ideapad.msh:53568 bom07s15-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:34392 bom07s18-in-f2.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:48360 lb-192-30-253-124:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:53572 bom07s15-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:52366 bom12s01-in-f4.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:48310 192.0.76.3:https        ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:55270 bom07s12-in-f2.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:58590 wordpress.com:https     ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:52656 stackoverflow.com:https ESTABLISHED 2302/firefox        
+tcp        0    518 coder-ideapad.msh:55572 edge-star-shv-01-:https FIN_WAIT1   -                   
+tcp        0    518 coder-ideapad.msh:55570 edge-star-shv-01-:https FIN_WAIT1   -                   
+tcp        0      0 coder-ideapad.msh:58364 maa03s29-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:42496 bom07s18-in-f5.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:59098 bom05s15-in-f3.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:53586 bom07s15-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:34442 bom07s18-in-f2.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:59664 bom07s12-in-f14.1:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:52564 stackoverflow.com:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:35898 108.177.122.97:https    ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:40896 bom05s11-in-f2.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:52564 185.199.109.153:https   ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:53556 bom07s15-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:37816 a23-56-101-11.depl:http ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:47336 lb-192-30-253-124:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:51918 bom07s11-in-f1.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:53588 bom07s15-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:53560 bom07s15-in-f14.1:https TIME_WAIT   -                   
+tcp        0      0 coder-ideapad.msh:41532 a23-59-28-166.dep:https ESTABLISHED 2302/firefox        
+tcp        0    517 coder-ideapad.msh:52316 117.18.237.66:https     ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:49568 just100.justhost.:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:34078 103.243.115.107:http    ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:56386 atl26s15-in-f3.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:33464 192.0.73.2:https        ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:38208 172.217.194.156:https   ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:37686 172.217.194.189:https   ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:33260 bom07s20-in-f4.1e:https ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:38208 172.217.194.156:https   ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:37686 172.217.194.189:https   ESTABLISHED 2302/firefox        
+tcp        0      0 coder-ideapad.msh:33260 bom07s20-in-f4.1e:https ESTABLISHED 2302/firefox        
+tcp6       0      0 [::]:http               [::]:*                  LISTEN      1224/apache2        
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      1216/sshd           
+tcp6       0      0 ip6-localhost:ipp       [::]:*                  LISTEN      3647/cupsd          
+udp        0      0 localhost:domain        0.0.0.0:*                           871/systemd-resolve 
+udp        0      0 0.0.0.0:bootpc          0.0.0.0:*                           1721/dhclient       
+udp        0      0 0.0.0.0:bootpc          0.0.0.0:*                           1626/dhclient       
+udp        0      0 0.0.0.0:53782           0.0.0.0:*                           876/avahi-daemon: r 
+udp        0      0 0.0.0.0:ipp             0.0.0.0:*                           3648/cups-browsed   
+udp        0      0 0.0.0.0:mdns            0.0.0.0:*                           876/avahi-daemon: r 
+udp6       0      0 [::]:51900              [::]:*                              876/avahi-daemon: r 
+udp6       0      0 [::]:mdns               [::]:*                              876/avahi-daemon: r 
