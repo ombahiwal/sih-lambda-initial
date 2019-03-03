@@ -6,6 +6,7 @@ from ipwhois import IPWhois
 import time, threading
 import os
 import signal
+from pprint import pprint
 
 
 WAIT_SECONDS = 5
@@ -124,6 +125,30 @@ def foo():
 
     print("Finding IP Geo locations...")
     locations = []
+    command = ['python3','./IPGeoLocation-master/ipgeolocation.py','-m']
+    p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    text = p.stdout.read()
+    # text = text[len(text)-15:]
+    text = text[-50:-1]
+    temp = str(text)
+    temp = list(temp)
+    location = []
+    flag = False
+    comma = 0
+    for i in range(0, len(temp)):
+        if temp[i] =='@' or comma <=2 and flag:
+            if temp[i] == ',':
+                comma = comma+1
+                if comma == 2:
+                    break
+            flag = True
+            location.append(temp[i+1])
+
+    location = location[1:-1]
+    location = ''.join(location)
+    locations.append(location)
+    retcode = p.wait()
+
     output_in_list[0].append('Location')
     for j in range(0, len(foriegn_ips)):
         command = ['python3','./IPGeoLocation-master/ipgeolocation.py','-t',foriegn_ips[j]]
@@ -151,9 +176,9 @@ def foo():
         output_in_list[j+1].append(location)
         retcode = p.wait()
     print("Geolocations found..")
-    # Abuse IP Logic
-        # Write Basemap CSV File
 
+
+# Write Basemap CSV File
 
     for i in range(0, len(locations)):
         temp = locations[i].split(',')
@@ -170,7 +195,7 @@ def foo():
     # abuse IP Code
     output_in_list[0].append('AbuseIP ConScore')
     print("Abuse IP test Running...")
-    print(foriegn_ips)
+    # print(foriegn_ips)
     for i in range(0, len(foriegn_ips)):
         print("Testing : ",foriegn_ips[i])
         command = ['python3' , 'AbuseIPDB.py','-i',foriegn_ips[i]]
@@ -184,15 +209,17 @@ def foo():
         temp = temp[2:]
         output_in_list[i][-1] = temp
 
-
-
     #code for country lookup
     print("whois country lookup...")
     output_in_list[0].append('Country')
+    output_in_list[0].append('asn_description')
     for i in range(0, len(foriegn_ips)):
         obj = IPWhois(foriegn_ips[i])
         results = obj.lookup_whois()
         output_in_list[i+1].append(results['nets'][0]['country'])
+        output_in_list[i+1].append(results['asn_description'] )
+
+        pprint(results)
     print("Country Lookup Done..")
 
         # Logic to write the data into a file
