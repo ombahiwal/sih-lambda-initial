@@ -95,6 +95,7 @@ def foo():
 
     # VT
     if operating_system == 'Linux':
+        output_in_list[0].append('VT result')
         for i in range(1, len(output_in_list)):
             if len(output_in_list[i][6].split('/')) == 2:
                 pid = (output_in_list[i][6].split('/'))[0]
@@ -102,14 +103,14 @@ def foo():
                 p = subprocess.Popen(command, stdout=subprocess.PIPE)
                 print("Loading...")
                 text = p.stdout.read()
-
                 print(text)
-                r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/insert', json={"id": "value"})
+                output_in_list[i].append(text)
+                r = requests.post(' https://iv7rvncxh7.execute-api.us-east-2.amazonaws.com/genysis/', json={"id": "value"})
                 print(r.json())
-                if text == 'None':
-                    p = subprocess.Popen(command, stdout=subprocess.PIPE)
-                    print("Loading ML...")
-                    text = p.stdout.read()
+                # if text == 'None':
+                #     p = subprocess.Popen(command, stdout=subprocess.PIPE)
+                #     print("Loading ML...")
+                #     text = p.stdout.read()
                 retcode = p.wait()
 
     # Code for IP Location
